@@ -1,0 +1,12 @@
+@import url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2');
+
+$font-main: 'Diphylleia-Regular', sans-serif;
+
+.font-default {
+    font-family: $font-main;
+    font-size: 20px;
+}
+
+.App {
+    @extend .font-default;
+}
