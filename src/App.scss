@@ -1,12 +1,24 @@
-@import url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2');
+@import url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2");
 
-$font-main: 'Diphylleia-Regular', sans-serif;
+$font-main: Diphylleia-Regular, sans-serif !important;
+$color-black: #434343;
+
+.page-size {
+  width: 100vw;
+  height: 100vh;
+}
 
 .font-default {
-    font-family: $font-main;
-    font-size: 20px;
+  font-family: $font-main;
+  font-size: 20px;
 }
 
 .App {
-    @extend .font-default;
+  @extend .font-default;
+  @extend .page-size;
+}
+
+.MainLayout {
+  @extend .page-size;
+  background-color: $color-black;
 }
