@@ -31,6 +31,13 @@ $color-lightyell: #FAEBCD;
     background-color: $color-black;
 }
 
+.footerLayout {
+  font-family: $font-main;
+  font-size: 10px;
+  color: white;
+  background-color: $color-black;
+  padding: 20px 20px 30px;
+}
 
 a {
     text-decoration: none;
