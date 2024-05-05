@@ -2,6 +2,8 @@
 
 $font-main: Diphylleia-Regular, sans-serif !important;
 $color-black: #434343;
+$color-deepyell: #F7C873;
+$color-lightyell: #FAEBCD;
 
 .page-size {
   width: 100vw;
@@ -24,9 +26,9 @@ $color-black: #434343;
     background-color: $color-black;
 }
     
-.header {
+.headerLayout {
     @extend .font-default;
-    color:#F7C873;
+    background-color: $color-black;
 }
 
 
@@ -34,10 +36,54 @@ a {
     text-decoration: none;
 }
 
-nav {
-    float: right;
-}  
+.logo {
+  @extend .font-default;
+  color:#F7C873;
+  position:absolute;
+  top:4px;
+  left:10px;
+}
 
-.nav input[type="text"]{
-    @extend .font-default;
+.searchBox {
+  position:absolute;
+  top: 5px;
+  right:100px;
+  height:27px;
+  width: 250px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.searchBox:hover {outline:2px solid $color-deepyell;}
+
+.searchInput{
+  position:absolute;
+  top: 2.5px;
+  right:17px;
+  height:20px;
+  width: 200px;
+  border: 0px;
+}
+
+.searchInput:focus {outline:none;}
+
+.signButton{
+  position:absolute;
+  top: 4px;
+  right:17px;
+  height:27px;
+  width: 75px;
+  border: 0px;
+  background-color: $color-lightyell;
+  border-radius: 7px;
+  font-family: $font-main;
+  font-size: 15px;
+}
+
+.signButton:hover{background-color: $color-deepyell;}
+
+.searchIcon{
+  position:absolute;
+  top:5px;
+  left:3px;
 }
