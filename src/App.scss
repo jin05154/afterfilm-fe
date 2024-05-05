@@ -9,16 +9,35 @@ $color-black: #434343;
 }
 
 .font-default {
-  font-family: $font-main;
-  font-size: 20px;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .App {
-  @extend .font-default;
-  @extend .page-size;
+    @extend .font-default;
+    @extend .page-size;
 }
 
 .MainLayout {
-  @extend .page-size;
-  background-color: $color-black;
+    @extend .page-size;
+    background-color: $color-black;
+}
+    
+.header {
+    @extend .font-default;
+    color:#F7C873;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+}  
+
+.nav input[type="text"]{
+    @extend .font-default;
 }
