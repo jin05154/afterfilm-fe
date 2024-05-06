@@ -1,9 +1,4 @@
-@import url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2");
-
-$font-main: Diphylleia-Regular, sans-serif !important;
-$color-black: #434343;
-$color-deepyell: #F7C873;
-$color-lightyell: #FAEBCD;
+@import "./variable";
 
 .page-size {
   width: 100vw;
@@ -11,74 +6,77 @@ $color-lightyell: #FAEBCD;
 }
 
 .font-default {
-    font-family: $font-main;
-    font-weight: bold;
-    font-size: 20px;
+  font-family: $font-main;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .App {
-    @extend .font-default;
-    @extend .page-size;
+  @extend .font-default;
+  @extend .page-size;
 }
 
-.MainLayout {
-    @extend .page-size;
-    background-color: $color-black;
-}
-    
 .headerLayout {
-    @extend .font-default;
-    background-color: $color-black;
+  @extend .font-default;
+  background-color: $color-black;
+  height: 30px;
+  padding: 10px 20px;
+  border-bottom: 1px solid $color-white;
 }
 
 .footerLayout {
   font-family: $font-main;
   font-size: 10px;
-  color: white;
+  color: $color-white;
   background-color: $color-black;
   padding: 20px 20px 30px;
+  border-top: 1px solid $color-white;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo {
   @extend .font-default;
-  color:#F7C873;
-  position:absolute;
-  top:4px;
-  left:10px;
+  color: $color-deepyell;
+  position: absolute;
+  top: 4px;
+  left: 10px;
 }
 
 .searchBox {
-  position:absolute;
+  position: absolute;
   top: 5px;
-  right:100px;
-  height:27px;
+  right: 100px;
+  height: 27px;
   width: 250px;
   background-color: white;
   border-radius: 7px;
 }
 
-.searchBox:hover {outline:2px solid $color-deepyell;}
+.searchBox:hover {
+  outline: 2px solid $color-deepyell;
+}
 
-.searchInput{
-  position:absolute;
+.searchInput {
+  position: absolute;
   top: 2.5px;
-  right:17px;
-  height:20px;
+  right: 17px;
+  height: 20px;
   width: 200px;
   border: 0px;
 }
 
-.searchInput:focus {outline:none;}
+.searchInput:focus {
+  outline: none;
+}
 
-.signButton{
-  position:absolute;
+.signButton {
+  position: absolute;
   top: 4px;
-  right:17px;
-  height:27px;
+  right: 17px;
+  height: 27px;
   width: 75px;
   border: 0px;
   background-color: $color-lightyell;
@@ -87,10 +85,74 @@ a {
   font-size: 15px;
 }
 
-.signButton:hover{background-color: $color-deepyell;}
+.signButton:hover {
+  background-color: $color-deepyell;
+}
 
-.searchIcon{
-  position:absolute;
-  top:5px;
-  left:3px;
+.searchIcon {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+/* Body */
+.BodyWrapper {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - (50px + 158px) - 20px);
+  background-color: $color-black;
+  padding: 10px 20px;
+  overflow: scroll;
+}
+
+.ContentWrapper {
+  min-height: 360px;
+  width: 960px;
+  // border: 1px solid $color-white;
+}
+
+.ContentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 12px;
+  color: $color-white;
+  span {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Card Group (기본화면 컨텐츠 리스트) */
+.CardWrapper {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 2fr 1fr;
+  height: 360px;
+  div {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.MovieCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: $color-white;
+  // 영화 정보
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px 16px;
+    #MovieCardTitle {
+      font-size: 1.4rem;
+    }
+    #MovieCardDesc {
+      font-size: 0.8rem;
+    }
+  }
 }

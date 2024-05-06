@@ -1,11 +1,18 @@
-import MainLayout from "../layout/MainLayout";
+import Header from "../components/Common/Header";
+import Footer from "../components/Common/Footer";
+import Body from "../components/Common/Body";
+import Content from "../components/Common/Content";
 
 function MainPage() {
- return (
-    <MainLayout>
-        
-    </MainLayout>
- );
+  return (
+    <>
+      <Header />
+      <Body>
+        <Content type="card" title="컨텐츠 리스트" />
+      </Body>
+      <Footer />
+    </>
+  );
 }
 
 export default MainPage;
