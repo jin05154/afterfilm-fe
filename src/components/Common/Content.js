@@ -18,6 +18,7 @@ const SContentTitle = styled.div`
   color: ${COLOR.themeWhite};
   span {
     font-size: 1.5rem;
+    font-weight: bold;
   }
   p {
     font-size: 1rem;

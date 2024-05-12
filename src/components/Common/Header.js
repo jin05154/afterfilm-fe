@@ -12,6 +12,7 @@ const SHeaderLayout = styled.div`
 
 const SLogo = styled.a`
   font-size: 20px;
+  font-weight: bold;
   color: ${COLOR.themeYellow};
   position: absolute;
   top: 4px;
@@ -39,7 +40,6 @@ const SSearchInput = styled.input`
   width: 200px;
   border: 0px;
   font-family: sans-serif;
-  font-weight: normal;
   &:focus {
     outline: none;
   }
@@ -55,7 +55,6 @@ const SSignButton = styled.button`
   background-color: ${COLOR.themeBeige};
   border-radius: 7px;
   font-size: 15px;
-  font-weight: normal;
   &:hover {
     background-color: ${COLOR.themeYellow};
   }

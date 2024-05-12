@@ -28,6 +28,7 @@ const SCardContent = styled.div`
   }
   span:nth-child(1) {
     font-size: 1.4rem;
+    font-weight: bold;
   }
   span:nth-child(2) {
     font-size: 0.8rem;
