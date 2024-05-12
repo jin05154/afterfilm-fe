@@ -26,7 +26,7 @@ const SSearchBox = styled.label`
   width: 250px;
   background-color: white;
   border-radius: 7px;
-  :hover {
+  &:hover {
     outline: 2px solid ${COLOR.themeYellow};
   }
 `;
@@ -38,7 +38,9 @@ const SSearchInput = styled.input`
   height: 20px;
   width: 200px;
   border: 0px;
-  :focus {
+  font-family: sans-serif;
+  font-weight: normal;
+  &:focus {
     outline: none;
   }
 `;
@@ -53,7 +55,8 @@ const SSignButton = styled.button`
   background-color: ${COLOR.themeBeige};
   border-radius: 7px;
   font-size: 15px;
-  :hover {
+  font-weight: normal;
+  &:hover {
     background-color: ${COLOR.themeYellow};
   }
 `;
@@ -72,7 +75,7 @@ const Header = () => {
       </SLogo>
       <SSearchBox>
         <SSearchIcon>
-          <VscSearch />
+          <VscSearch style={{ width: "20px", height: "20px" }} />
         </SSearchIcon>
         <SSearchInput
           type="text"

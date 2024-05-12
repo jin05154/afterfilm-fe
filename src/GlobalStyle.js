@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   * {
     @import url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2");
-    font-family: Diphylleia-Regular, sans-serif !important;
+    font-family: Diphylleia-Regular, sans-serif;
     font-weight: bold;
   }
   .App {
