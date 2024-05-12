@@ -1,6 +1,15 @@
-import Card from "./Card";
+import styled from "styled-components";
 
+import Card from "./Card";
 import MOVIEDATA from "../../assets/mockData";
+
+const SCardWrapper = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 225px;
+  width: 1200px;
+`;
 
 function CardGroup() {
   // Chunk MOVIEDATA into groups of 3
@@ -12,7 +21,7 @@ function CardGroup() {
   return (
     <div>
       {chunkedMovies.map((movies, index) => (
-        <div className="CardWrapper" key={`cardWrapper-${index}`}>
+        <SCardWrapper key={`cardWrapper-${index}`}>
           {movies.map((movie, movieIndex) => (
             <Card
               key={`card-${index}-${movieIndex}`}
@@ -21,7 +30,7 @@ function CardGroup() {
               img={movie.img}
             />
           ))}
-        </div>
+        </SCardWrapper>
       ))}
     </div>
   );
