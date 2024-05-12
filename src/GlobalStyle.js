@@ -4,8 +4,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     @import url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2");
     font-family: Diphylleia-Regular, sans-serif !important;
-    margin: 0;
-    padding: 0;
+    font-weight: bold;
   }
   .App {
     height: 100vh;
