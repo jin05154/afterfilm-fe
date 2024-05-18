@@ -1,30 +1,29 @@
-import Card from "./Card";
+import { SCardWrapper } from "./StyledComponents";
 
+import Card from "./Card";
 import MOVIEDATA from "../../assets/mockData";
 
 function CardGroup() {
+  // Chunk MOVIEDATA into groups of 3
+  const chunkedMovies = [];
+  for (let i = 0; i < MOVIEDATA.length; i += 3) {
+    chunkedMovies.push(MOVIEDATA.slice(i, i + 3));
+  }
+
   return (
-    <div className="CardWrapper">
-      <Card
-        title={MOVIEDATA[2].title}
-        desc={MOVIEDATA[2].desc}
-        img={MOVIEDATA[2].img}
-        size="large"
-      />
-      <div>
-        <Card
-          title={MOVIEDATA[0].title}
-          desc={MOVIEDATA[0].desc}
-          img={MOVIEDATA[0].img}
-          size="default"
-        />
-        <Card
-          title={MOVIEDATA[1].title}
-          desc={MOVIEDATA[1].desc}
-          img={MOVIEDATA[1].img}
-          size="default"
-        />
-      </div>
+    <div>
+      {chunkedMovies.map((movies, index) => (
+        <SCardWrapper key={`cardWrapper-${index}`}>
+          {movies.map((movie, movieIndex) => (
+            <Card
+              key={`card-${index}-${movieIndex}`}
+              title={movie.title}
+              desc={movie.desc}
+              img={movie.img}
+            />
+          ))}
+        </SCardWrapper>
+      ))}
     </div>
   );
 }

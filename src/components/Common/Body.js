@@ -1,5 +1,7 @@
+import { SBodyWrapper } from "./StyledComponents";
+
 function Body({ children }) {
-  return <div className="BodyWrapper">{children}</div>;
+  return <SBodyWrapper>{children}</SBodyWrapper>;
 }
 
 export default Body;

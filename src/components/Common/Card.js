@@ -1,18 +1,14 @@
-// TODO: 카드 hover 효과
+import { SMovieCard, SCardContent } from "./StyledComponents";
 
-function Card({ title, desc, img, size }) {
-  const cardStyle = {
-    height: size === "default" ? "180px" : "360px",
-    backgroundImage: `url("${img}")`,
-  };
-
+function Card({ title, desc, img }) {
   return (
-    <div className="MovieCard" style={cardStyle}>
-      <div>
-        <span id="MovieCardTitle">{title}</span>
-        <span id="MovieCardDesc">{desc}</span>
-      </div>
-    </div>
+    <SMovieCard>
+      <img src={img} alt={title} />
+      <SCardContent>
+        <span>{title}</span>
+        <span>{desc}</span>
+      </SCardContent>
+    </SMovieCard>
   );
 }
 
