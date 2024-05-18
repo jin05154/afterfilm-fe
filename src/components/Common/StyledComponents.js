@@ -14,13 +14,13 @@ export const SLogo = styled.a`
   font-weight: bold;
   color: ${COLOR.themeYellow};
   position: absolute;
-  top: 4px;
-  left: 10px;
+  top: 10px;
+  left: 15px;
 `;
 
 export const SSearchBox = styled.label`
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 100px;
   height: 27px;
   width: 250px;
@@ -46,7 +46,7 @@ export const SSearchInput = styled.input`
 
 export const SSignButton = styled.button`
   position: absolute;
-  top: 4px;
+  top: 10px;
   right: 17px;
   height: 27px;
   width: 75px;
