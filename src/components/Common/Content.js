@@ -1,29 +1,6 @@
-import styled from "styled-components";
-import COLOR from "../../utils/color";
+import { SContentWrapper, SContentTitle } from "./StyledComponents";
 
 import CardGroup from "./CardGroup";
-
-const SContentWrapper = styled.div`
-  min-height: 360px;
-  width: 1200px;
-  // width: 90%;
-`;
-
-const SContentTitle = styled.div`
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  height: 40px;
-  padding-bottom: 10px;
-  color: ${COLOR.themeWhite};
-  span {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  p {
-    font-size: 1rem;
-  }
-`;
 
 function Content({ children, type, title }) {
   return (

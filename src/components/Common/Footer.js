@@ -1,13 +1,4 @@
-import styled from "styled-components";
-import COLOR from "../../utils/color";
-
-const SFooterLayout = styled.div`
-  font-size: 10px;
-  color: ${COLOR.themeWhite};
-  background-color: ${COLOR.themeBlack};
-  padding: 20px 20px 30px;
-  border-top: 1px solid ${COLOR.themeWhite};
-`;
+import { SFooterLayout } from "./StyledComponents";
 
 const Footer = () => {
   return (
