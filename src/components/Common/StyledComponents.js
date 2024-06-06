@@ -26,8 +26,9 @@ export const SSearchBox = styled.label`
   width: 250px;
   background-color: white;
   border-radius: 7px;
+  transition: outline 0.3s ease;
   &:hover {
-    outline: 2px solid ${COLOR.themeYellow};
+    outline: 1px solid ${COLOR.themeWhite};
   }
 `;
 
@@ -46,6 +47,7 @@ export const SSearchInput = styled.input`
 
 export const SSignButton = styled.button`
   position: absolute;
+  font-family: sans-serif;
   top: 10px;
   right: 17px;
   height: 27px;
@@ -54,6 +56,7 @@ export const SSignButton = styled.button`
   background-color: ${COLOR.themeBeige};
   border-radius: 7px;
   font-size: 15px;
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: ${COLOR.themeYellow};
   }
@@ -76,7 +79,7 @@ export const SFooterLayout = styled.div`
 
 /* Body */
 export const SBodyWrapper = styled.div`
-  display: flex;
+  display: block;
   justify-content: center;
   height: calc(100vh - (50px + 158px) - 20px);
   background-color: ${COLOR.themeBlack};
@@ -84,10 +87,19 @@ export const SBodyWrapper = styled.div`
   overflow: hidden;
 `;
 
+export const DBodyWrapper = styled.div`
+  display: block;
+  //justify-content: center;
+  //height: calc(100vh - (50px + 158px) - 20px);
+  background-color: ${COLOR.themeBlack};
+  //overflow: hidden;
+`;
+
 /* Content */
 export const SContentWrapper = styled.div`
-  min-height: 360px;
+  //min-height: 360px;
   width: 1200px;
+  margin: 0 auto;
   // width: 90%;
 `;
 

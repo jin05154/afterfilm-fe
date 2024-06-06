@@ -12,7 +12,7 @@ import { VscSearch } from "react-icons/vsc";
 const Header = () => {
   return (
     <SHeaderLayout>
-      <SLogo href="/" target="_blank" rel="noopener noreferrer">
+      <SLogo href="/" rel="noopener noreferrer">
         애프터필름
       </SLogo>
       <SSearchBox>
@@ -24,7 +24,7 @@ const Header = () => {
           placeholder="영화, 배우, 게시물을 검색해보세요."
         />
       </SSearchBox>
-      <SSignButton>Sign In</SSignButton>
+      <SSignButton>Sign-In</SSignButton>
     </SHeaderLayout>
   );
 };
