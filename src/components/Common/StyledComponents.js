@@ -174,8 +174,14 @@ export const SCardWrapper = styled.div`
 `;
 
 /* Comminuty */
+export const SCommunityWrapper = styled.div`
+  margin-bottom: 10px;
+  color: ${COLOR.themeWhite};
+  border: 1px solid ${COLOR.themeWhite};
+`;
 export const SCommunityTitle = styled.div`
   display: flex;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   padding-bottom: 1px;
@@ -189,7 +195,7 @@ export const SCommunityContent = styled.div`
   display: flex;
   margin-left: 15px;
   margin-right: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: ${COLOR.themeWhite};
   span {
     font-size: 0.7rem;

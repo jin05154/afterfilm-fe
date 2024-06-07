@@ -2,6 +2,7 @@ import { SContentWrapper, SContentTitle } from "./StyledComponents";
 
 import CardGroup from "./CardGroup";
 import PostGroup from "./PostGroup";
+import Gallery from "./Gallery";
 
 function Content({ children, type, title }) {
   return (
@@ -13,6 +14,7 @@ function Content({ children, type, title }) {
       </SContentTitle>
       {type === "card" && <CardGroup />}
       {type === "community" && <PostGroup/>}
+      {type === "gallery" && <Gallery/>}
       {children}
     </SContentWrapper>
   );
