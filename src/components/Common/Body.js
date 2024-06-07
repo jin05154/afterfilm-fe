@@ -5,6 +5,8 @@ function Body({ children, type }) {
   switch (type){
     case 'main': 
       return <SBodyWrapper>{children}</SBodyWrapper>
+    case 'card':
+      return <SBodyWrapper>{children}</SBodyWrapper>
     case 'detail':
       return <DBodyWrapper>{children}</DBodyWrapper>
   }

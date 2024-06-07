@@ -1,6 +1,7 @@
 import { SContentWrapper, SContentTitle } from "./StyledComponents";
 
 import CardGroup from "./CardGroup";
+import PostGroup from "./PostGroup";
 
 function Content({ children, type, title }) {
   return (
@@ -11,6 +12,7 @@ function Content({ children, type, title }) {
         <p>더보기</p>
       </SContentTitle>
       {type === "card" && <CardGroup />}
+      {type === "community" && <PostGroup/>}
       {children}
     </SContentWrapper>
   );

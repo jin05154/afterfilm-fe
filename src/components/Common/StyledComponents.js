@@ -172,3 +172,26 @@ export const SCardWrapper = styled.div`
   height: 225px;
   width: 1200px;
 `;
+
+/* Comminuty */
+export const SCommunityTitle = styled.div`
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 1px;
+  color: ${COLOR.themeWhite};
+  span {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+`;
+export const SCommunityContent = styled.div`
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 10px;
+  color: ${COLOR.themeWhite};
+  span {
+    font-size: 0.7rem;
+  }
+`;
