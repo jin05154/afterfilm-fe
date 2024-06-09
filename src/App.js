@@ -1,15 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./GlobalStyle";
+import Layout from "./components/Common/Layout";
 
 /* Pages */
-import MainPage from "./pages/DetailPage"; /* 라우팅 전 임시 변경 */
+import MainPage from "./pages/MainPage";
+import DetailPage from "./pages/DetailPage";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <div className="App">
-        <MainPage />
-      </div>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/detail" element={<DetailPage />} />
+          </Routes>
+        </Layout>
+      </Router>
     </>
   );
 }
