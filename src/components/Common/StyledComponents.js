@@ -79,9 +79,10 @@ export const SFooterLayout = styled.div`
 
 /* Body */
 export const SBodyWrapper = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: calc(100vh - (50px + 158px) - 20px);
+  min-height: calc(100vh - (50px + 158px) - 20px);
   background-color: ${COLOR.themeBlack};
   padding: 10px 20px;
   overflow: hidden;
