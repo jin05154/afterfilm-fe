@@ -1,7 +1,7 @@
 import Header from "../components/Common/Header";
 import Footer from "../components/Common/Footer";
 import Body from "../components/Common/Body";
-import Content from "../components/Common/Content";
+import Content from "../components/Detail/Content";
 
 function MainPage() {
   return (

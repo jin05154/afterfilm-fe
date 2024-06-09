@@ -1,4 +1,4 @@
-import { SCommunityWrapper,SCommunityTitle, SCommunityContent } from "./StyledComponents";
+import { SCommunityWrapper,SCommunityTitle, SCommunityContent } from "../Common/StyledComponents";
 import { VscThumbsup, VscThumbsdown, VscComment } from "react-icons/vsc";
 
 

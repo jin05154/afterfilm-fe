@@ -1,6 +1,6 @@
-import { SContentWrapper, SContentTitle } from "./StyledComponents";
+import { SContentWrapper, SContentTitle } from "../Common/StyledComponents";
 
-import CardGroup from "./CardGroup";
+import CardGroup from "../Common/CardGroup";
 import PostGroup from "./PostGroup";
 import Gallery from "./Gallery";
 

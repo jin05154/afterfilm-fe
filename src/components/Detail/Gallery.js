@@ -1,6 +1,6 @@
-import { SCardWrapper } from "./StyledComponents";
+import { SCardWrapper } from "../Common/StyledComponents";
 
-import Card from "./Card";
+import Card from "../Common/Card";
 import MOVIEDATA from "../../assets/mockData";
 
 function CardGroup() {

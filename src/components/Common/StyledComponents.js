@@ -90,9 +90,9 @@ export const SBodyWrapper = styled.div`
 export const DBodyWrapper = styled.div`
   display: block;
   //justify-content: center;
-  //height: calc(100vh - (50px + 158px) - 20px);
+  height: calc(100vh - (50px + 158px) - 20px);
   background-color: ${COLOR.themeBlack};
-  //overflow: hidden;
+  overflow: hidden;
 `;
 
 /* Content */
