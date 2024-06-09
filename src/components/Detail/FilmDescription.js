@@ -1,19 +1,34 @@
 import styled from "styled-components";
 import COLOR from "../../utils/color";
+import PlatformInfo from "./PlatformInfo";
 
 function FilmDescription() {
   return (
     <Wrapper>
-      <Title>{DATA[0].title}</Title>
-      <DetailWrapper>
-        <Detail>{DATA[0].release}</Detail>
-        <Detail>{DATA[0].genre}</Detail>
-        <Detail>{DATA[0].country}</Detail>
-      </DetailWrapper>
-      <DetailWrapper>
-        <Detail>{DATA[0].runningtime}</Detail>
-        <Detail>{DATA[0].agerate}</Detail>
-      </DetailWrapper>
+      <StillCut url={DATA[0].still} />
+      <OverlappingWrapper gap="10px">
+        <RowWrapper gap="60px">
+          <Poster url={DATA[0].poster} />
+          <RowWrapper gap="120px">
+            <ColumnWrapper gap="10px">
+              <Title>{DATA[0].title}</Title>
+              <ColumnWrapper>
+                <RowWrapper>
+                  <Detail>{DATA[0].release} ·</Detail>
+                  <Detail>{DATA[0].genre} ·</Detail>
+                  <Detail>{DATA[0].country}</Detail>
+                </RowWrapper>
+                <RowWrapper>
+                  <Detail>{DATA[0].runningtime} ·</Detail>
+                  <Detail>{DATA[0].agerate}</Detail>
+                </RowWrapper>
+              </ColumnWrapper>
+            </ColumnWrapper>
+            <PlatformInfo />
+          </RowWrapper>
+        </RowWrapper>
+        <Detail>{DATA[0].description}</Detail>
+      </OverlappingWrapper>
     </Wrapper>
   );
 }
@@ -22,13 +37,30 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 1200px;
+  height: 640px;
+  padding: 10px 0;
+  gap: 10px;
   color: ${COLOR.themeWhite};
 `;
 
-const DetailWrapper = styled.div`
+const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  align-items: flex-end;
+  gap: ${(props) => props.gap || "4px"};
+`;
+
+const ColumnWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.gap || "2px"};
+`;
+
+const OverlappingWrapper = styled(ColumnWrapper)`
+  position: absolute;
+  width: calc(1200px - 100px);
+  padding: 0 50px;
+  margin-top: 160px;
 `;
 
 const Title = styled.span`
@@ -37,7 +69,40 @@ const Title = styled.span`
 `;
 
 const Detail = styled.span`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  max-width: 1200px;
+`;
+
+const Poster = styled.div`
+  width: 259px;
+  height: 372px;
+  background-image: ${({ url }) => `url(${url})`};
+  background-size: cover;
+  background-position: center;
+`;
+
+const StillCut = styled.div`
+  position: relative;
+  width: inherit;
+  height: 400px;
+  background-image: ${({ url }) => `url(${url})`};
+  background-size: cover;
+  background-position: top;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      ${COLOR.gradientBackground},
+      transparent
+    );
+    pointer-events: none;
+  }
 `;
 
 const DATA = [
