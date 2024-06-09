@@ -1,9 +1,9 @@
-import { SCardWrapper } from "../Common/StyledComponents";
-
+import { DGalleryWrapper, DGalleryIconLeft, DGalleryIconRight } from "../Common/StyledComponents";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import Card from "../Common/Card";
 import MOVIEDATA from "../../assets/mockData";
 
-function CardGroup() {
+function Gallery() {
   // Chunk MOVIEDATA into groups of 3
   const chunkedMovies = [];
   for (let i = 0; i < 2; i += 3) {
@@ -13,17 +13,23 @@ function CardGroup() {
   return (
     <div>
       {chunkedMovies.map((movies, index) => (
-        <SCardWrapper key={`cardWrapper-${index}`}>
+        <DGalleryWrapper key={`cardWrapper-${index}`}>
+          <DGalleryIconLeft>
+            <FaChevronCircleLeft color='#fff' />
+          </DGalleryIconLeft>  
           {movies.map((movie, movieIndex) => (
             <Card
               key={`card-${index}-${movieIndex}`}
               img={movie.img}
             />
           ))}
-        </SCardWrapper>
+          <DGalleryIconRight>
+            <FaChevronCircleRight color='#fff' />
+          </DGalleryIconRight>  
+        </DGalleryWrapper>
       ))}
     </div>
   );
 }
 
-export default CardGroup;
+export default Gallery;
