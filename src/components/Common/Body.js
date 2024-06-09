@@ -1,8 +1,9 @@
 import { SBodyWrapper, DBodyWrapper } from "./StyledComponents";
 
 function Body({ children, type }) {
-  if(type == null) type = 'main'
   switch (type){
+    default:
+      return <SBodyWrapper>{children}</SBodyWrapper>
     case 'main': 
       return <SBodyWrapper>{children}</SBodyWrapper>
     case 'card':

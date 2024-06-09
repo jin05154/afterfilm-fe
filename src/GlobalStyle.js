@@ -9,11 +9,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: Diphylleia-Regular, sans-serif;
     font-weight: normal;
   }
-  .App {
-    height: 100vh;
-    width: 100vw;
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
     min-width: 1200px;
-    overflow: hidden;
+    overflow: auto;
 
     a {
       text-decoration: none;
