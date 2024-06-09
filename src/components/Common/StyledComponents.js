@@ -173,6 +173,40 @@ export const SCardWrapper = styled.div`
   width: 1200px;
 `;
 
+/* Gallery */
+export const DGalleryWrapper = styled.div`
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 225px;
+  width: 1000px;
+  z-index: 1;
+`;
+
+export const DGalleryIconLeft = styled.div`
+  position: absolute;
+  z-index: 2;
+  font-size: 25px;
+  margin-top: 100px;
+  transition: 0.3s;
+  &:hover {
+    font-size: 27px;
+  }
+`;
+
+export const DGalleryIconRight = styled.div`
+  position: absolute;
+  z-index: 2;
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left:1175px;
+  transition: 0.3s;
+  &:hover {
+    font-size: 27px;
+  }
+`;
+
 /* Comminuty */
 export const SCommunityWrapper = styled.div`
   margin-bottom: 10px;
