@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import COLOR from "../../utils/color";
+
 import Content from "./Content";
 import PlatformInfo from "./PlatformInfo";
+import Save from "../Common/Save";
 
 function FilmDescription() {
   return (
@@ -13,7 +15,10 @@ function FilmDescription() {
             <Poster url={DATA[0].poster} />
             <RowWrapper gap="120px">
               <ColumnWrapper gap="10px">
-                <Title>{DATA[0].title}</Title>
+                <ColumnWrapper>
+                  <Save />
+                  <Title>{DATA[0].title}</Title>
+                </ColumnWrapper>
                 <ColumnWrapper>
                   <RowWrapper>
                     <Detail>{DATA[0].release} ·</Detail>
