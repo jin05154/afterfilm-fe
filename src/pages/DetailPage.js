@@ -1,11 +1,11 @@
 import Body from "../components/Common/Body";
-import FilmHeader from "../components/Detail/FilmHeader";
+import FilmDescription from "../components/Detail/FilmDescription";
 import Content from "../components/Detail/Content";
 
 function DetailPage() {
   return (
     <Body>
-      <FilmHeader />
+      <FilmDescription />
       <Content title="감독/출연" />
       <Content type="community" title="게시물" />
       <Content type="gallery" title="갤러리" />

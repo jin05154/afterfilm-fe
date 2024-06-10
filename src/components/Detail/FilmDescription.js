@@ -1,35 +1,47 @@
 import styled from "styled-components";
 import COLOR from "../../utils/color";
+
+import Content from "./Content";
 import PlatformInfo from "./PlatformInfo";
+import StarRating from "../Common/StarRating";
+import Save from "../Common/Save";
 
 function FilmDescription() {
   return (
-    <Wrapper>
-      <StillCut url={DATA[0].still} />
-      <OverlappingWrapper gap="10px">
-        <RowWrapper gap="60px">
-          <Poster url={DATA[0].poster} />
-          <RowWrapper gap="120px">
-            <ColumnWrapper gap="10px">
-              <Title>{DATA[0].title}</Title>
-              <ColumnWrapper>
-                <RowWrapper>
-                  <Detail>{DATA[0].release} ·</Detail>
-                  <Detail>{DATA[0].genre} ·</Detail>
-                  <Detail>{DATA[0].country}</Detail>
-                </RowWrapper>
-                <RowWrapper>
-                  <Detail>{DATA[0].runningtime} ·</Detail>
-                  <Detail>{DATA[0].agerate}</Detail>
-                </RowWrapper>
+    <Content>
+      <Wrapper>
+        <StillCut url={DATA[0].still} />
+        <OverlappingWrapper gap="10px">
+          <RowWrapper gap="60px">
+            <Poster url={DATA[0].poster} />
+            <RowWrapper gap="120px">
+              <ColumnWrapper gap="10px">
+                <ColumnWrapper>
+                  <Save />
+                  <Title>{DATA[0].title}</Title>
+                </ColumnWrapper>
+                <ColumnWrapper>
+                  <RowWrapper>
+                    <Detail>{DATA[0].release} ·</Detail>
+                    <Detail>{DATA[0].genre} ·</Detail>
+                    <Detail>{DATA[0].country}</Detail>
+                  </RowWrapper>
+                  <RowWrapper>
+                    <Detail>{DATA[0].runningtime} ·</Detail>
+                    <Detail>{DATA[0].agerate}</Detail>
+                  </RowWrapper>
+                </ColumnWrapper>
               </ColumnWrapper>
-            </ColumnWrapper>
-            <PlatformInfo />
+              <ColumnWrapper gap="10px">
+              <StarRating />
+              <PlatformInfo />
+              </ColumnWrapper>
+            </RowWrapper>
           </RowWrapper>
-        </RowWrapper>
-        <Detail>{DATA[0].description}</Detail>
-      </OverlappingWrapper>
-    </Wrapper>
+          <Detail>{DATA[0].description}</Detail>
+        </OverlappingWrapper>
+      </Wrapper>
+    </Content>
   );
 }
 
