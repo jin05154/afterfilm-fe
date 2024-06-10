@@ -18,5 +18,6 @@ export default Star;
 
 const StarContainer = styled.div`
   display: inline-block;
+  height: 36px;
   cursor: pointer;
 `;

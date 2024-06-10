@@ -31,11 +31,15 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 40px;
   width: 300px;
+  height: 36px;
   gap: 10px;
+  padding: 4px 0;
   
   span {
+    display: inline-block;
+    width: 12px;
+    height: inherit;
     padding-left: 8px;
     font-size: 1.4rem;
   }
