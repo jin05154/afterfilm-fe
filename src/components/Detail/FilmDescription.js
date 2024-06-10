@@ -3,6 +3,7 @@ import COLOR from "../../utils/color";
 
 import Content from "./Content";
 import PlatformInfo from "./PlatformInfo";
+import StarRating from "../Common/StarRating";
 import Save from "../Common/Save";
 
 function FilmDescription() {
@@ -31,7 +32,10 @@ function FilmDescription() {
                   </RowWrapper>
                 </ColumnWrapper>
               </ColumnWrapper>
+              <ColumnWrapper gap="10px">
+              <StarRating />
               <PlatformInfo />
+              </ColumnWrapper>
             </RowWrapper>
           </RowWrapper>
           <Detail>{DATA[0].description}</Detail>
