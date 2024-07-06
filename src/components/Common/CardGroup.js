@@ -1,25 +1,47 @@
+import { useState, useEffect } from "react";
 import { SCardWrapper } from "./StyledComponents";
 
 import Card from "./Card";
 import MOVIEDATA from "../../assets/mockData";
 
 function CardGroup() {
-  // Chunk MOVIEDATA into groups of 3
-  const chunkedMovies = [];
-  for (let i = 0; i < MOVIEDATA.length; i += 3) {
-    chunkedMovies.push(MOVIEDATA.slice(i, i + 3));
-  }
+  const [movies, setMovies] = useState([]);
+  const [chunkedMovies, setChunkedMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/movie/box-office")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Fetched data:", data.response);
+        setMovies(data.response);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  useEffect(() => {
+    // Chunk movies into groups of 3
+    const chunk = [];
+    for (let i = 0; i < movies.length; i += 3) {
+      chunk.push(movies.slice(i, i + 3));
+    }
+    setChunkedMovies(chunk);
+  }, [movies]);
+
+  useEffect(() => {
+    console.log("Movies state updated:", movies);
+    console.log("Movies chunked:", chunkedMovies);
+  }, [movies, chunkedMovies]);
 
   return (
     <div>
-      {chunkedMovies.map((movies, index) => (
+      {chunkedMovies.map((moviesChunk, index) => (
         <SCardWrapper key={`cardWrapper-${index}`}>
-          {movies.map((movie, movieIndex) => (
+          {moviesChunk.map((movie, movieId) => (
             <Card
-              key={`card-${index}-${movieIndex}`}
+              key={`card-${index}-${movieId}`}
               title={movie.title}
-              desc={movie.desc}
-              img={movie.img}
+              desc={movie.plot}
+              img={movie.posterUrls[0]}
             />
           ))}
         </SCardWrapper>

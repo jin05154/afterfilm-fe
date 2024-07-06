@@ -122,8 +122,8 @@ export const SContentTitle = styled.div`
 
 /* Card */
 export const SMovieCard = styled.div`
-  height: 225px;
-  width: 400px;
+  height: 304px;
+  width: 213px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -170,7 +170,7 @@ export const SCardWrapper = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 225px;
+  height: 304px;
   width: 1200px;
 `;
 

@@ -18,7 +18,7 @@ function Content({ children, type, title }) {
         <>
           <SContentTitle>
             <span>{title}</span>
-            {/* 더보기 버튼 - 버튼 컴포넌트 생성 필요 */}
+            {/* TODO: 더보기 버튼 - 버튼 컴포넌트 생성 필요 */}
             <p>더보기</p>
           </SContentTitle>
           <ContentType />
